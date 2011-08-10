@@ -1,42 +1,69 @@
-RGB ColorPicker 1.1
+Valeriy Pogrebitskiy's JavaScript Challenge Project
 
-Basic setup
------------
-In the HEAD section of your page add the following code to load the RGB ColorPicker
-code and stylesheet:
+Requirements:
+-------------
 
-  <link rel="stylesheet" type="text/css" href="rgbcp/rgbcp.css"/>
-  <script language="javascript" src="rgbcp/rgbcp.js"></script>
+1. Please create an HTML page with two buttons at the top, followed by a table.
+The exact positioning and layout is not important, though centering the table 
+in the middle of the browser window would be nice.
+2. The table should be a 5x5 table and the squares should be 100x100 pixels.  
+3. Each square should have a starting background color. I'm not particular 
+how you decide which square gets which starting color; make half blue and half 
+red, it doesn't matter.
+4. Clicking the squares should bring up a popup box with an input field and two buttons.
+The input field is the RGB value of the background color as currently displayed, and 
+the buttons read "Apply" and "Cancel". I should be able to pick a new RGB value, click 
+"Apply" and have that become the new background color for that square.  Hitting "Cancel" 
+has the effect of making the popup box disappear and not changing the background color.
+5. The buttons at the top of the page have the following functionality: 
+	5.1 Button 1 rotates background color (but not the other attributes) of the cells of 
+	OUTER layer of the table - one square to the left (in a "circular" manner).  
+	5.2 Button 2 rotates background color (but not the other attributes) of the cells of 
+	INNER (second) layer of the table one square to the left.
 
-Just before the body close tag add the following:
+So, if this was the layout before you pressed button 1:
 
-  <script language="javascript">cp_create();</script>
+1   2   3   4   5 
+6   7   8   9   10 
+11  12  13  14  15 
+16  17  18  19  20 
+21  22  23  24  25 
 
+After pressing button 1: 
+	- bgcolor of square 21 would be where square 22 is now; 
+	- bgcolor of square 5 would be where square 4 is now, etc.
 
-Quick field example
--------------------
-Suppose you have a input field on your page you want to control with the colorpicker.
-First make sure the input field has a unique id.
-  <input id="field_id" ... >
+If you pressed button 2:
+	- the same would happen, only bgcolor of square 17 would replace that of square 18, 
+	bgcolor of square 9 would replace bgcolor of square 8, etc.
 
-Then add the following javascript section directly after the input field:
-  <script language="javascript">cp_color_field('field_id', CP_FIELD_BOX);</script>
-
-The 'field_id' parameter must match the id of the corresponding input field.
-The CP_FIELD_BOX parameter makes a clickable color indicator box. If you only want
-to show a clickable icon you can also change this to CP_FIELD_ICON.
-You can also have both with CP_FIELD_ICON + CP_FIELD_BOX.
-
-If you want the colorbox to update automatically when the input field is edited, add
-the following onchange event to the input field.
-
-  <input id="field_id" ... onchange="cp_update_color_box(this.id);">
-  
-
-See http://www.sqweek.com/sqweek/index.php?p=2 for some more examples
+You don't have to actually swap the cells, just make the colors move.
 
 
+IMPORTANT:
+----------
+
+1. I do not have prior JavaScript experience, this is my first "experiment" with this language.
+From this prospective - this code is most probably far from being optimal, efficient and elegant.
+There are most certainly a lot of ways to improve (or even completely redesign) the code.
+But what's important to understand - is that I ...
+
+	- developed this simple project within (relatively) short amount of time, having
+	no prior JavaScript knowledge/experience
+	- learned some basics of the JavaScript language
+	- searched online for information related to this assignment, and successfully applied 
+	that in the code
+	
+In short - this exercise demonstrates my ability to learn new technology quickly, without any
+help (other that using generally available sources of information).
 
 
-
-
+2. In addition, normally I would ... 
+	- develop unittest scripts that verify code works exactly as expected. I have not done 
+	this on this project - but want to ensure that unittest'ing - is among practices I regard 
+	very highly (and consider myself being very good at that)
+	- supplement code with good comments (and a lot of them)
+	- develop API documentation for the entire application. For example, in Python I was even 
+	generating two sets of such documentation - using 'Epydoc' and 'pydoctor' tools
+	  
+	a give
