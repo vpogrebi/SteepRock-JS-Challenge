@@ -1,0 +1,42 @@
+RGB ColorPicker 1.1
+
+Basic setup
+-----------
+In the HEAD section of your page add the following code to load the RGB ColorPicker
+code and stylesheet:
+
+  <link rel="stylesheet" type="text/css" href="rgbcp/rgbcp.css"/>
+  <script language="javascript" src="rgbcp/rgbcp.js"></script>
+
+Just before the body close tag add the following:
+
+  <script language="javascript">cp_create();</script>
+
+
+Quick field example
+-------------------
+Suppose you have a input field on your page you want to control with the colorpicker.
+First make sure the input field has a unique id.
+  <input id="field_id" ... >
+
+Then add the following javascript section directly after the input field:
+  <script language="javascript">cp_color_field('field_id', CP_FIELD_BOX);</script>
+
+The 'field_id' parameter must match the id of the corresponding input field.
+The CP_FIELD_BOX parameter makes a clickable color indicator box. If you only want
+to show a clickable icon you can also change this to CP_FIELD_ICON.
+You can also have both with CP_FIELD_ICON + CP_FIELD_BOX.
+
+If you want the colorbox to update automatically when the input field is edited, add
+the following onchange event to the input field.
+
+  <input id="field_id" ... onchange="cp_update_color_box(this.id);">
+  
+
+See http://www.sqweek.com/sqweek/index.php?p=2 for some more examples
+
+
+
+
+
+
