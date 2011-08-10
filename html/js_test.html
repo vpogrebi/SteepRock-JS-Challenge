@@ -1,9 +1,26 @@
 <HTML>
 <HEAD>
     <TITLE>SteepRock JavaScript Challenge - Valeriy Pogrebitskiy</TITLE>
-    <!-- 
-    <SCRIPT language="javascript" src="src/challenge.js" />
-    -->
+<!-- <SCRIPT language="javascript" src="js/challenge.js" />  -->	
+    <SCRIPT language="javascript">
+
+    function switchOuter(tableID) {
+    	alert("'Outer' is clicked");
+    }
+     
+    function switchInner(tableID) {
+    	alert("'Inner' is clicked");
+    }
+    
+	function bgUpdate(cell) {
+		var newColor = prompt("Choose background color: ", cell.bgColor );
+		if (newColor) {
+			cell.bgColor = newColor;
+		} 						
+	}
+	
+    </SCRIPT>
+    
 </HEAD>
 
 <BODY> 
@@ -11,48 +28,49 @@
 	
 	<TABLE align="center">
 		<tr>
-			<td><INPUT type="button" value="Outer" onclick="javascript:switchOuter('dataTable')" /></td>
-			<td><INPUT type="button" value="Inner" onclick="javascript:switchInner('dataTable')" /></td>
+			<td><INPUT type="button" value="Outer" onclick="switchOuter('dataTable')" /></td>
+			<td><INPUT type="button" value="Inner" onclick="switchInner('dataTable')" /></td>
 		</tr>
 	</TABLE>
-    
+
     <TABLE id="dataTable" align="center" border="1">
         <TR>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="green"	onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="green"	onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
         </TR>
         <TR>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="green"	onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="green"	onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
         </TR>
         <TR>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="green"	onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="green"	onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
         </TR>
         <TR>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="green"	onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="green"	onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
         </TR>
         <TR>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="blue"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="green"	onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
-            <TD width="100px" height="100px" bgcolor="red"		onclick="javascript:bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="blue"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="green"	onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
+            <TD width="100px" height="100px" bgcolor="red"		onclick="bgUpdate(this)"/>
         </TR>
     </TABLE>
  
+<script language="javascript">cp_create();</script> 
 </BODY>
 </HTML>
